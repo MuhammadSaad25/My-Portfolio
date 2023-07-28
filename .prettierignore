@@ -1,10 +1,11 @@
-npx prettier --write .
+# npx prettier --write .
 
 
 # Ignore artifacts:
 build
 coverage
-
+**/.next
+.next
 **/.git
 /.git
 **/.svn
