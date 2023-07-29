@@ -7,3 +7,15 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+.dark {
+  background: #171717;
+  color: #fefefe;
+  transition: 1s;
+}
+
+.light {
+  background: #fefefe;
+  color: #171717;
+  transition: 1s;
+}

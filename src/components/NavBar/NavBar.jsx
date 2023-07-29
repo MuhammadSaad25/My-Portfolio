@@ -2,10 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/img/logo/saadlogo.png"; // Make sure to replace this with the actual path to your logo image
 import Sidebar from "../SideBar/SideBar";
+import DarkLight from "../DarkLight/DarkLight";
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
-    <nav className="w-full flex items-center justify-between py-4 px-6 sm:px-10 bg-[#171717] shadow-lg shadow-red-800">
+    <nav className="relative w-full flex items-center justify-between py-4 px-6 sm:px-10  shadow-lg shadow-red-800">
       {/* Left side with logo */}
       <div className="flex items-center">
         <Link href="/">
@@ -18,38 +19,38 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Sidebar  */}
-
-      <Sidebar />
-
       {/* Right side with navigation links */}
       <ul className="hidden sm:flex items-center space-x-4">
         <li>
-          <Link href="/" className="text-white">
-            Home
-          </Link>
+          <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/about" className="text-white">
-            About
-          </Link>
+          <Link href="/about">About</Link>
         </li>
         <li>
-          <Link href="/portfolio" className="text-white">
-            Portfolio
-          </Link>
+          <Link href="/portfolio">Portfolio</Link>
         </li>
         <li>
-          <Link href="/contact" className="text-white">
-            Contact
-          </Link>
+          <Link href="/contact">Contact</Link>
+        </li>
+        <li>
+          <DarkLight
+            isDarkMode={isDarkMode}
+            toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
+          />
         </li>
         {/* Add more navigation links as needed */}
       </ul>
 
-      {/* Mobile menu (visible on small screens) */}
-      <div className="sm:hidden flex items-center space-x-4">
-        {/* Implement mobile menu icon and functionality (e.g., using a burger menu) */}
+      <div className="flex sm:hidden items-center">
+        {/* Sidebar  */}
+
+        <Sidebar isDarkMode={isDarkMode} />
+
+        <DarkLight
+          isDarkMode={isDarkMode}
+          toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
+        />
       </div>
     </nav>
   );
