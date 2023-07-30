@@ -24,7 +24,7 @@ export default function Home() {
         isDarkMode={isDarkMode}
         toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
       />
-      <Hero />
+      <Hero timeline={tl} ease={ease} />
     </main>
   );
 }

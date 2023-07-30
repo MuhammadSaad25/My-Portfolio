@@ -34,7 +34,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, timeline, ease }) => {
   });
 
   return (
-    <nav className="relative w-full flex items-center justify-between py-4 px-6 sm:px-10  shadow-lg shadow-red-800">
+    <nav className="relative w-full flex items-center justify-between py-4 px-6 sm:px-10  shadow-lg shadow-sky-400">
       {/* Left side with logo */}
       <div className="flex items-center" ref={(el) => (logo1 = el)}>
         <Link href="/">
