@@ -25,7 +25,8 @@
 /* >>>>>>>>>>>>>>>> hero box pics >>>>>>>>>>>>>>>>> */
 
 .hero_box1 {
-  background: url(../img/hero/bg.jpg) no-repeat 50% 50%;
+  background: url(https://res.cloudinary.com/dixrdohp4/image/upload/v1690718006/bg_idgjcw.jpg)
+    no-repeat 50% 50%;
   background-size: cover;
 }
 .hero_box2 {
