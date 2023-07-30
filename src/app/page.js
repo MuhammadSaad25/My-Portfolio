@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import Hero from "@/components/Hero/Hero";
-import NavBar from "@/components/NavBar/NavBar";
 import { gsap, Power3 } from "gsap";
+import NavBar from "@/components/NavBar/NavBar";
+import Hero from "@/components/Hero/Hero";
+import Accordion from "@/components/Projects/Accordion";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -25,6 +26,7 @@ export default function Home() {
         toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
       />
       <Hero timeline={tl} ease={ease} />
+      <Accordion isDarkMode={isDarkMode} />
     </main>
   );
 }

@@ -26,7 +26,7 @@ const Content = ({ timeline }) => {
     <div>
       <div className="flex flex-col  justify-center gap-5  md:[90vh] h-auto   lg:w-[50vw] w-[90vw] lg:p-11 p-3">
         <h1
-          className="flex-col gap-2 md:text-5xl text-2xl"
+          className="flex-col gap-2 md:text-5xl text-2xl font-bold"
           ref={(el) => (h1 = el)}
         >
           <div className="overflow-hidden ">

@@ -37,3 +37,20 @@
   background: url(../img/hero/pic3.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
+
+.carousel1 :nth-child(1) li {
+  position: static !important;
+}
+
+.carousel1 :nth-child(2) {
+  right: -80%;
+  bottom: 15%;
+  gap: 10px;
+  /* height: 50px; */
+}
+
+.carousel1 :nth-child(2) li button {
+  height: 16px;
+  width: 16px;
+  border: 2px solid #f1b001;
+}
