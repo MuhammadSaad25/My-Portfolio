@@ -25,8 +25,10 @@ const Accordion = ({ isDarkMode }) => {
   };
 
   return (
-    <div className="w-full flex flex-col gap-5 p-11">
-      <h1 className="text-sky-400 md:text-5xl text-2xl font-bold">Projects</h1>
+    <div className="w-full flex flex-col gap-5 ">
+      <h1 className="text-sky-400 md:text-5xl text-2xl font-bold md:[p-11] p-6 ">
+        Projects
+      </h1>
       <Carousel
         infinite={true}
         autoPlay={true}
@@ -54,7 +56,7 @@ const Accordion = ({ isDarkMode }) => {
 
               {/* >>>>>>>>>>>>>  uper layer >>>>>>>>>>>>>>>> */}
               <div
-                className={`shadow-lg shadow-sky-400 absolute z-50 w-[650px] left-[5%] bottom-[60px] flex flex-col justify-end items-start gap-5  p-5 rounded-2xl , ${
+                className={`shadow-lg shadow-sky-400 absolute z-50 md:[650px] w-[300px] left-[5%] bottom-[60px] flex flex-col justify-end items-start gap-5  p-5 rounded-2xl , ${
                   isDarkMode ? "dark" : "light"
                 }`}
               >
