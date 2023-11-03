@@ -56,7 +56,7 @@ const Accordion = ({ isDarkMode }) => {
 
               {/* >>>>>>>>>>>>>  uper layer >>>>>>>>>>>>>>>> */}
               <div
-                className={`shadow-lg shadow-sky-400 absolute z-50 md:[650px] w-[300px] left-[5%] bottom-[60px] flex flex-col justify-end items-start gap-5  p-5 rounded-2xl , ${
+                className={`shadow-lg shadow-sky-400 absolute z-50 md:w-[650px] w-[300px] left-[5%] bottom-[60px] flex flex-col justify-end items-start gap-5  p-5 rounded-2xl , ${
                   isDarkMode ? "dark" : "light"
                 }`}
               >

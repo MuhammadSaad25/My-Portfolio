@@ -12,9 +12,20 @@ const projectData = [
   },
   {
     id: "2",
+    title: "Wish By Star Web",
+    previewImg:
+      "https://res.cloudinary.com/dixrdohp4/image/upload/v1690777275/WBS_xfyjfj.png",
+    description:
+      "As a Front end developer for a dynamic website using Next.js, CSS, and JavaScript. Created an engaging, high-performance platform, showcasing expertise in web development and responsive design.",
+    techUsed: ["NextJS", "CSS", "JavaScript"],
+    repoLink: "https://github.com/shehza-d/News-App/",
+    hostedLink: "https://wbs.sidat.digital",
+  },
+  {
+    id: "3",
     title: "News App",
     previewImg:
-      "https://res.cloudinary.com/deh1sqok6/image/upload/v1679250971/portfolio-ss/e32i6sdh1mzc72pdawm6.png",
+      "https://res.cloudinary.com/dixrdohp4/image/upload/v1690777275/WBS_xfyjfj.png",
     description: "Dynamic News App with Bing API",
     techUsed: ["ReactJS", "Dynamic", "API"],
     repoLink: "https://github.com/shehza-d/News-App/",
