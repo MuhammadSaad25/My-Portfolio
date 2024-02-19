@@ -46,7 +46,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode, timeline, ease }) => {
             toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
           />
         </li>
-        {/* Add more navigation links as needed */}
       </ul>
 
       <div className="flex sm:hidden items-center">
