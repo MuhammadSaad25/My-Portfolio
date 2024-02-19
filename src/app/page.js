@@ -20,27 +20,41 @@ export default function Home() {
   let ease = Power3.easeOut();
 
   return (
-    <main
-      className={`relative flex min-h-screen flex-col items-center ${
-        isDarkMode ? "dark" : "light"
-      }`}
-    >
-      {/* <NavBar
-        timeline={tl}
-        ease={ease}
-        setIsDarkMode={setIsDarkMode}
-        isDarkMode={isDarkMode}
-        toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
-      /> */}
-      {/* <Hero timeline={tl} ease={ease} /> */}
-      {/* <Accordion isDarkMode={isDarkMode} /> */}
-      {/* <Slider /> */}
 
-      {/* <Signup /> */}
-      {/* <Login /> */}
-      {/* <Main /> */}
-      {/* <Dashboard /> */}
-      <DoctorProfile />
+    <main
+      className={`relative flex min-h-screen flex-col items-center ${isDarkMode ? "dark" : "light"
+        }`}
+    >
+      <video
+        autoPlay
+        loop
+        muted
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        className="absolute"
+      >
+        <source src="https://res.cloudinary.com/dixrdohp4/video/upload/v1708323786/mixkit-infinity-corridor-with-futuristic-style-32960-medium_zz4cua.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute h-screen w-full video-bg">
+        <NavBar
+          // timeline={tl}
+          // ease={ease}
+          setIsDarkMode={setIsDarkMode}
+          isDarkMode={isDarkMode}
+          toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
+        />
+
+        {/* <Hero timeline={tl} ease={ease} /> */}
+        {/* <Accordion isDarkMode={isDarkMode} /> */}
+        {/* <Slider /> */}
+
+        {/* <Signup /> */}
+        {/* <Login /> */}
+        {/* <Main /> */}
+        {/* <Dashboard /> */}
+        {/* <DoctorProfile /> */}
+      </div>
     </main>
+
   );
 }
