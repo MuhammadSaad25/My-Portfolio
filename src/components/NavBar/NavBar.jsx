@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import logoLight from '@/img/logo/saadlogolight.png' // Make sure to replace this with the actual path to your logo image
-import logoDark from '@/img/logo/saadlogodark.png' // Make sure to replace this with the actual path to your logo image
+import logoLight from '@/img/logo/saadlogolight.png'
+import logoDark from '@/img/logo/saadlogodark.png'
 import Sidebar from '../SideBar/SideBar'
 import DarkLight from '../DarkLight/DarkLight'
 import React, { useRef, useEffect } from 'react'
