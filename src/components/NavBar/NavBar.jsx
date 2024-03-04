@@ -6,12 +6,12 @@ import logoDark from '@/img/logo/saadlogodark.png'
 import Sidebar from '../SideBar/SideBar'
 import DarkLight from '../DarkLight/DarkLight'
 import React, { useRef, useEffect } from 'react'
+import ThemeChanger from '../ThemeChanger'
 
 const Navbar = ({ isDarkMode, setIsDarkMode, timeline, ease }) => {
   return (
     <nav
-      className={`relative w-full flex items-center justify-between py-4 px-6 sm:px-10  shadow-lg shadow-sky-400 ${
-        isDarkMode ? 'dark' : 'light'
+      className={`relative w-full flex items-center justify-between py-4 px-6 sm:px-10  shadow-lg shadow-sky-400 '
       }`}
     >
       {/* Left side with logo */}
@@ -25,6 +25,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode, timeline, ease }) => {
           />{' '}
         </Link>
       </div>
+
+      <ThemeChanger/>
 
       {/* Right side with navigation links */}
       <ul className="hidden sm:flex items-center space-x-4">

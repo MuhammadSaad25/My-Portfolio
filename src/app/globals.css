@@ -8,11 +8,24 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+:root {
+  /* Your default theme styles */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme='dark'] {
+  /* Styles for dark mode */
+  --background: black;
+  --foreground: white;
+}
+
+
+
 *::-webkit-scrollbar {
   display: none;
   color: #000;
 }
-
 
 .dark {
   background: #171717;
@@ -27,17 +40,7 @@
 /* >>>>>>>>>>>>>>>> hero box pics >>>>>>>>>>>>>>>>> */
 
 .hero_box1 {
-  background: url(https://res.cloudinary.com/dixrdohp4/image/upload/v1690718549/bg_o1sh0l.jpg)
-    no-repeat 50% 50%;
-  background-size: cover;
-}
-.hero_box2 {
-  background: url(../img/hero/pic2.jpg) no-repeat 50% 50%;
-  background-size: cover;
-}
-.hero_box3 {
-  background: url(../img/hero/pic3.jpg) no-repeat 50% 50%;
-  background-size: cover;
+
 }
 
 .carousel1 :nth-child(1) li {

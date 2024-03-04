@@ -1,60 +1,75 @@
 "use client";
-import React, { useState } from "react";
-import { gsap, Power3 } from "gsap";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "@/components/NavBar/NavBar";
 import Hero from "@/components/Hero/Hero";
-import Signup from "@/components/signup";
-// Import Login
-import Accordion from "@/components/Projects/Accordion";
-import Login from "@/components/login";
-import Main from "@/components/Home";
-import Dashboard from "@/components/Dashboard";
-import DoctorProfile from "@/components/DoctorProfile";
-// import Slider from "@/components/Carousel";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { ThemeProvider } from 'next-themes';
+import { useTheme } from 'next-themes'
+
 
 export default function Home() {
+
+  const { theme } = useTheme()
+
+
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-  // gsap
-  let tl = new gsap.timeline();
-  let ease = Power3.easeOut();
+  const videoUrl = 'https://res.cloudinary.com/dixrdohp4/video/upload/v1708323786/mixkit-infinity-corridor-with-futuristic-style-32960-medium_zz4cua.mp4';
+  const videoUrl2 = 'https://res.cloudinary.com/dixrdohp4/video/upload/v1708432754/videolight_zcf551.mp4';
+
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 })
+  }, [])
+
+  const handleDarkModeToggle = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+    // Reload the page
+    window.location.reload();
+  };
+
+
 
   return (
+    <ThemeProvider theme="system" attribute="class">
+      <main className={`relative flex  h-screen flex-col items-center ${theme}`}>
 
-    <main
-      className={`relative flex min-h-screen flex-col items-center ${isDarkMode ? "dark" : "light"
-        }`}
-    >
-      <video
-        autoPlay
-        loop
-        muted
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        className="absolute"
-      >
-        <source src="https://res.cloudinary.com/dixrdohp4/video/upload/v1708323786/mixkit-infinity-corridor-with-futuristic-style-32960-medium_zz4cua.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div className="absolute h-screen w-full video-bg">
-        <NavBar
-          // timeline={tl}
-          // ease={ease}
-          setIsDarkMode={setIsDarkMode}
-          isDarkMode={isDarkMode}
-          toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          className="absolute"
+        >
+          {/* {theme === "light" ? (
+          ) : ( */}
+          <source src={videoUrl} type="video/mp4" />
+            {/* <source src={videoUrl2} type="video/mp4" /> */}
+          {/* )}        */}
 
-        {/* <Hero timeline={tl} ease={ease} /> */}
-        {/* <Accordion isDarkMode={isDarkMode} /> */}
-        {/* <Slider /> */}
+           {console.log (theme === "light" ? (videoUrl):(videoUrl2))} 
+           {console.log("🚀 ~ Home ~ theme:", theme)}
+        
+        </video>
 
-        {/* <Signup /> */}
-        {/* <Login /> */}
-        {/* <Main /> */}
-        {/* <Dashboard /> */}
-        {/* <DoctorProfile /> */}
-      </div>
-    </main>
+        <div className="absolute h-full overflow-scroll w-full">
+          <div data-aos="fade-top" className="z-10 fixed w-full top-0">
+            <NavBar
+              setIsDarkMode={setIsDarkMode}
+              isDarkMode={isDarkMode}
+              // toggleDarkMode={() => setIsDarkMode((prevMode) => !prevMode)}
+              toggleDarkMode={handleDarkModeToggle}
+            />
+          </div>
+          <div data-aos="fade-bottom" className="w-full">
+            <Hero />
+
+          </div>
+        </div>
+      </main>
+    </ThemeProvider>
 
   );
 }
