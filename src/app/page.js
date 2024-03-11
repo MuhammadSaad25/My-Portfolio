@@ -35,6 +35,7 @@ export default function Home() {
   return (
     <ThemeProvider theme="system" attribute="class">
       <main className={`relative flex  h-screen flex-col items-center ${theme}`}>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/TtIcgRJsyPg?si=Zf3C5tQeJE2OwUdB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         <video
           autoPlay
