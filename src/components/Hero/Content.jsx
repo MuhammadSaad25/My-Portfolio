@@ -1,19 +1,7 @@
-'use client'
-import React, { useRef, useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-
 const Content = () => {
-  useEffect(() => {
-    AOS.init({ duration: 2000 })
-  }, [])
-
   return (
     <div>
-      <div
-        data-aos="fade-right"
-        className="flex flex-col  justify-center gap-5  md:[90vh] h-auto   lg:w-[50vw] w-[90vw] lg:p-11 p-3"
-      >
+      <div className="flex flex-col  justify-center gap-5  md:[90vh] h-auto   lg:w-[50vw] w-[90vw] lg:p-11 p-3">
         <h1 className="flex-col gap-2 md:text-5xl text-2xl font-bold">
           <div>Crafting Digital Experiences with Next.js</div>
           <div>Welcome to my portfolio! I m Muhammad Saad,</div>
@@ -34,7 +22,7 @@ const Content = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Content
+export default Content;

@@ -1,14 +1,13 @@
-'use client'
-import Link from 'next/link'
-import Image from 'next/image'
-import logoLight from '@/img/logo/saadlogolight.png'
-import logoDark from '@/img/logo/saadlogodark.png'
-import Sidebar from '../SideBar/SideBar'
-import DarkLight from '../DarkLight/DarkLight'
-import React, { useRef, useEffect } from 'react'
-import ThemeChanger from '../ThemeChanger'
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import logoLight from "@/img/logo/saadlogolight.png";
+import logoDark from "@/img/logo/saadlogodark.png";
+import Sidebar from "../SideBar/SideBar";
+import DarkLight from "../DarkLight/DarkLight";
+import ThemeChanger from "../ThemeChanger";
 
-const Navbar = ({ isDarkMode, setIsDarkMode, timeline, ease }) => {
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <nav
       className={`relative w-full flex items-center justify-between py-4 px-6 sm:px-10  shadow-lg shadow-sky-400 '
@@ -22,11 +21,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode, timeline, ease }) => {
             alt="logo"
             title="Logo"
             className="h-10 w-auto sm:h-12 transition-transform hover:scale-110"
-          />{' '}
+          />{" "}
         </Link>
       </div>
 
-      <ThemeChanger/>
+      <ThemeChanger />
 
       {/* Right side with navigation links */}
       <ul className="hidden sm:flex items-center space-x-4">
@@ -61,7 +60,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, timeline, ease }) => {
         />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
